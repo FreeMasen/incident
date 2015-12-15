@@ -17,24 +17,11 @@ namespace CustomerIncidents
         {
             InitializeComponent();
             Main = main;
-            Name = Name;
+            Name = name;
         }
 
         private Form1 Main;
         private string Name;
-        private void productsBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.productsBindingSource.EndEdit();
-
-        }
-
-        private void productsBindingNavigatorSaveItem_Click_1(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.productsBindingSource.EndEdit();
-
-        }
 
         private void NewIncident_Load(object sender, EventArgs e)
         {
@@ -42,7 +29,6 @@ namespace CustomerIncidents
             this.productsTableAdapter.Fill(this.techSupport_DataDataSet.Products);
             txtID.Text = Main.customerIDToolStripTextBox.Text;
             txtName.Text = Name;
-
         }
 
         private bool isValid()
@@ -57,14 +43,18 @@ namespace CustomerIncidents
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Main.addIncident(Int32.Parse(txtID.Text), cboProduct.SelectedValue.ToString(),DateTime.Now, txtTitle.Text,txtDescription.Text);
-            Main.Show();
-            Close();
+            if (isValid())
+            {
+                Main.addIncident(Int32.Parse(txtID.Text), cboProduct.SelectedValue.ToString(), DateTime.Now,
+                    txtTitle.Text, txtDescription.Text);
+                Main.Show();
+                Close();
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Main.Show();
+            Main.Visible = true;
             Close();
         }
     }

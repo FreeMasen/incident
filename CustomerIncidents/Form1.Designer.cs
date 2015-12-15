@@ -138,7 +138,7 @@
             this.customerIDTextBox.ReadOnly = true;
             this.customerIDTextBox.Size = new System.Drawing.Size(100, 31);
             this.customerIDTextBox.TabIndex = 2;
-            this.customerIDTextBox.TextChanged += new System.EventHandler(this.customerIDTextBox_TextChanged);
+            this.customerIDTextBox.TabStop = false;
             // 
             // customersBindingSource
             // 
@@ -158,6 +158,7 @@
             this.nameTextBox.ReadOnly = true;
             this.nameTextBox.Size = new System.Drawing.Size(484, 31);
             this.nameTextBox.TabIndex = 4;
+            this.nameTextBox.TabStop = false;
             // 
             // addressTextBox
             // 
@@ -167,6 +168,7 @@
             this.addressTextBox.ReadOnly = true;
             this.addressTextBox.Size = new System.Drawing.Size(484, 31);
             this.addressTextBox.TabIndex = 6;
+            this.addressTextBox.TabStop = false;
             // 
             // cityTextBox
             // 
@@ -176,6 +178,7 @@
             this.cityTextBox.ReadOnly = true;
             this.cityTextBox.Size = new System.Drawing.Size(282, 31);
             this.cityTextBox.TabIndex = 8;
+            this.cityTextBox.TabStop = false;
             // 
             // stateTextBox
             // 
@@ -185,6 +188,7 @@
             this.stateTextBox.ReadOnly = true;
             this.stateTextBox.Size = new System.Drawing.Size(90, 31);
             this.stateTextBox.TabIndex = 10;
+            this.stateTextBox.TabStop = false;
             // 
             // zipCodeTextBox
             // 
@@ -194,6 +198,7 @@
             this.zipCodeTextBox.ReadOnly = true;
             this.zipCodeTextBox.Size = new System.Drawing.Size(100, 31);
             this.zipCodeTextBox.TabIndex = 12;
+            this.zipCodeTextBox.TabStop = false;
             // 
             // phoneTextBox
             // 
@@ -203,6 +208,7 @@
             this.phoneTextBox.ReadOnly = true;
             this.phoneTextBox.Size = new System.Drawing.Size(248, 31);
             this.phoneTextBox.TabIndex = 14;
+            this.phoneTextBox.TabStop = false;
             // 
             // emailTextBox
             // 
@@ -212,6 +218,7 @@
             this.emailTextBox.ReadOnly = true;
             this.emailTextBox.Size = new System.Drawing.Size(484, 31);
             this.emailTextBox.TabIndex = 16;
+            this.emailTextBox.TabStop = false;
             // 
             // incidentsDataGridView
             // 

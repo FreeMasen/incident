@@ -64,7 +64,7 @@ namespace CustomerIncidents
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            Main.Show();
+            Main.Visible = true;
             Close();
         }
 
