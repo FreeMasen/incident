@@ -98,7 +98,7 @@ namespace CustomerIncidents
         {
             if (TextBoxValidator.IsPresent(nameTextBox, "Customer Information"))
             {
-                NewIncident ni = new NewIncident(this, nameTextBox.Text);
+                NewIncident ni = new NewIncident(this, nameTextBox.Text, Int32.Parse(customerIDTextBox.Text));
                 Hide();
                 ni.ShowDialog();
             }

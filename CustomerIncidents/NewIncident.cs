@@ -13,15 +13,17 @@ namespace CustomerIncidents
 {
     public partial class NewIncident : Form
     {
-        public NewIncident(Form1 main, string name)
+        public NewIncident(Form1 main, string name, int customerID)
         {
             InitializeComponent();
             Main = main;
             Name = name;
+            CustomerID = customerID;
         }
 
         private Form1 Main;
         private string Name;
+        private int CustomerID;
 
         private void NewIncident_Load(object sender, EventArgs e)
         {
@@ -29,6 +31,7 @@ namespace CustomerIncidents
             this.productsTableAdapter.Fill(this.techSupport_DataDataSet.Products);
             txtID.Text = Main.customerIDToolStripTextBox.Text;
             txtName.Text = Name;
+            txtID.Text = CustomerID.ToString();
         }
 
         private bool isValid()
@@ -45,7 +48,7 @@ namespace CustomerIncidents
         {
             if (isValid())
             {
-                Main.addIncident(Int32.Parse(txtID.Text), cboProduct.SelectedValue.ToString(), DateTime.Now,
+                Main.addIncident(CustomerID, cboProduct.SelectedValue.ToString(), DateTime.Now,
                     txtTitle.Text, txtDescription.Text);
                 Main.Show();
                 Close();
